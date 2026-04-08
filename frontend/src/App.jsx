@@ -4,6 +4,7 @@ import LoginPage from './pages/Login'
 import AdminPage from './pages/AdminDashboard'
 import QuizPage from './pages/QuizPage'
 import LeaderboardPage from './pages/LeaderBoard'
+import WelcomeCard from './components/WelcomeCard'
 
 function App() {
   return (
@@ -14,6 +15,13 @@ function App() {
       <Route path="/quiz" element={<QuizPage />} />
       <Route path="/leaderboard" element={<LeaderboardPage />} />
     </Routes>
+
+function App() { 
+
+  return (
+    <>
+       <WelcomeCard/>
+    </>
   )
 }
 
