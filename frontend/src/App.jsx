@@ -8,6 +8,8 @@ import WelcomeCard from './components/WelcomeCard'
 
 function App() {
   return (
+    <>
+
     <Routes>
       <Route path="/" element={<HomePage />} /> 
       <Route path="/login" element={<LoginPage />} />
@@ -16,10 +18,7 @@ function App() {
       <Route path="/leaderboard" element={<LeaderboardPage />} />
     </Routes>
 
-function App() { 
 
-  return (
-    <>
        <WelcomeCard/>
     </>
   )
