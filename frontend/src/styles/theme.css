@@ -1,0 +1,146 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+
+  /* Gaming Color Palette (HSL format for Tailwind compatibility) */
+  --game-purple: 250 100% 67%;
+  --game-cyan: 180 100% 50%;
+  --game-pink: 340 100% 59%;
+  --game-dark-bg: 222.2 84% 4.9%;
+  --game-card-bg: 222.2 84% 4.9%;
+  --game-success: 142.1 76.2% 36.3%;
+  --game-warning: 38 92% 50%;
+
+  --background: var(--game-dark-bg);
+  --foreground: 210 40% 98%;
+
+  --card: var(--game-card-bg);
+  --card-foreground: 210 40% 98%;
+
+  --popover: var(--game-card-bg);
+  --popover-foreground: 210 40% 98%;
+
+  --primary: var(--game-purple);
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: var(--game-cyan);
+  --secondary-foreground: 222.2 84% 4.9%;
+
+  --muted: 215 27.9% 16.9%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: var(--game-pink);
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+  --input-background: 215 27.9% 16.9%;
+  --switch-background: 215 20.2% 65.1%;
+
+  --ring: var(--game-cyan);
+
+  --radius: 1rem;
+
+  --sidebar: 222.2 84% 4.9%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-primary: var(--game-purple);
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 250 100% 67% / 0.1;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 215 27.9% 16.9%;
+  --sidebar-ring: var(--game-cyan);
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 250 100% 67%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 180 100% 50%;
+  --secondary-foreground: 222.2 84% 4.9%;
+
+  --muted: 215 27.9% 16.9%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 340 100% 59%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+
+  --ring: 180 100% 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .font-game {
+    font-family: "Orbitron", sans-serif;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  label,
+  button,
+  input {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  label,
+  button {
+    font-weight: 500;
+  }
+
+  input {
+    font-weight: 400;
+  }
+}
