@@ -29,6 +29,7 @@ const quizData = [
     options: ["Atlantic", "Indian", "Arctic", "Pacific"],
     correct: 3,
   },
+  
 ];
 
 export default function QuizGame() {
