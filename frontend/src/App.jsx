@@ -12,6 +12,8 @@ import Questions from "./pages/Questions";
 import JoinQuiz from "./pages/JoinQuiz";
 import Certificate from "./Components/Certificate";
 import SuperAdmin from "./pages/SuperAdmin.jsx";
+import CreateQuiz from "./pages/QuizPage";
+import Results from "./pages/Results";
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/" element={<Certificate/>} />
       <Route path="/join" element={<JoinQuiz />} />
+      <Route path="/" element={<CreateQuiz />} />
+      <Route path="/quiz" element={<CreateQuiz />} />
 
       {/* Reset Password */}
       <Route path="/reset-password/:token?" element={<ResetPassword />} />
