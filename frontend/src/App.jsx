@@ -1,28 +1,32 @@
-import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import Landing from "./pages/Landing";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-import UserDashboard from "./pages/UserDashboard";
-import UserProfile from "./pages/UserProfile";
+// ✅ IMPORT ALL COMPONENTS
+import Login from "./pages/Login.jsx";
+import Signup from "./pages/Signup.jsx";
+import ForgotPassword from "./pages/ForgotPassword.jsx";
+import ResetPassword from "./pages/ResetPassword.jsx";
+import SuperAdmin from "./pages/SuperAdmin.jsx";
 
-
-
-export default function App() {
+function App() {
   return (
-    <Layout>
-      <Routes>
+    <Routes>
+      {/* Default Route */}
+      <Route path="/" element={<Login />} />
+
+      {/* Auth Routes */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+
+      {/* Reset Password */}
+      <Route path="/reset-password/:token?" element={<ResetPassword />} />
+
+      {/* Super Admin */}
+      <Route path="/superadmin" element={<SuperAdmin />} />
 
       
-
-        {/* ✅ Dashboard */}
-        <Route path="/" element={<Landing />} />
-
-        {/* ✅ Profile */}
-        <Route path="/profile" element={<UserProfile />} />
-
-        <Route path="/quiz" element={<h1>Quiz</h1>} />
-
-      </Routes>
-    </Layout>
+    </Routes>
   );
 }
+
+export default App;
