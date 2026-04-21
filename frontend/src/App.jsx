@@ -5,7 +5,14 @@ import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import ForgotPassword from "./pages/ForgotPassword.jsx";
 import ResetPassword from "./pages/ResetPassword.jsx";
+import AdminDashboard from "./pages/AdminDashboard";
+import Setting from "./pages/Setting";
+import Analytics from "./pages/Analytics";
+import Questions from "./pages/Questions";
+import JoinQuiz from "./pages/JoinQuiz";
+import Certificate from "./Components/Certificate";
 import SuperAdmin from "./pages/SuperAdmin.jsx";
+
 
 function App() {
   return (
@@ -17,6 +24,8 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/" element={<Certificate/>} />
+      <Route path="/join" element={<JoinQuiz />} />
 
       {/* Reset Password */}
       <Route path="/reset-password/:token?" element={<ResetPassword />} />
