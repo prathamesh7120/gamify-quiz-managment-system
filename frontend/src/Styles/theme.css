@@ -1,0 +1,250 @@
+:root {
+  --font-size: 16px;
+  
+  /* Gaming Color Palette */
+  --game-purple: #6C5CE7;
+  --game-cyan: #00F5D4;
+  --game-pink: #FF2E63;
+  --game-dark-bg: #0F172A;
+  --game-card-bg: #111827;
+  --game-success: #22C55E;
+  --game-warning: #F59E0B;
+  
+  --background: var(--game-dark-bg);
+  --foreground: #ffffff;
+  --card: var(--game-card-bg);
+  --card-foreground: #ffffff;
+  --popover: var(--game-card-bg);
+  --popover-foreground: #ffffff;
+  --primary: var(--game-purple);
+  --primary-foreground: #ffffff;
+  --secondary: var(--game-cyan);
+  --secondary-foreground: var(--game-dark-bg);
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+  --accent: var(--game-pink);
+  --accent-foreground: #ffffff;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.05);
+  --switch-background: #475569;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: var(--game-cyan);
+  --chart-1: var(--game-purple);
+  --chart-2: var(--game-cyan);
+  --chart-3: var(--game-pink);
+  --chart-4: var(--game-success);
+  --chart-5: var(--game-warning);
+  --radius: 1rem;
+  --sidebar: #1E293B;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: var(--game-purple);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(108, 92, 231, 0.1);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: var(--game-cyan);
+}
+
+.dark {
+  --background: var(--game-dark-bg);
+  --foreground: #ffffff;
+  --card: var(--game-card-bg);
+  --card-foreground: #ffffff;
+  --popover: var(--game-card-bg);
+  --popover-foreground: #ffffff;
+  --primary: var(--game-purple);
+  --primary-foreground: #ffffff;
+  --secondary: var(--game-cyan);
+  --secondary-foreground: var(--game-dark-bg);
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+  --accent: var(--game-pink);
+  --accent-foreground: #ffffff;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.05);
+  --ring: var(--game-cyan);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: var(--game-purple);
+  --chart-2: var(--game-cyan);
+  --chart-3: var(--game-pink);
+  --chart-4: var(--game-success);
+  --chart-5: var(--game-warning);
+  --sidebar: #1E293B;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: var(--game-purple);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(108, 92, 231, 0.1);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: var(--game-cyan);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-game {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
+/* ========================= */
+/* 🔥 ANIMATED BACKGROUND */
+/* ========================= */
+
+.animated-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    270deg,
+    var(--game-dark-bg),
+    #1e293b,
+    #020617,
+    var(--game-dark-bg)
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ========================= */
+/* 🔥 GLOW BLOBS */
+/* ========================= */
+
+.blob {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  animation: blobMove 18s infinite alternate ease-in-out;
+}
+
+.b1 {
+  background: var(--game-purple);
+  top: -100px;
+  left: -100px;
+}
+
+.b2 {
+  background: var(--game-cyan);
+  bottom: -120px;
+  right: -100px;
+}
+
+.b3 {
+  background: var(--game-pink);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Blob movement */
+@keyframes blobMove {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  100% {
+    transform: translate(100px, -80px) scale(1.3);
+  }
+}
+
+
+/* ========================= */
+/* 🔥 EXTRA FLOATING GLOW */
+/* ========================= */
+
+.floating-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: var(--game-cyan);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.2;
+  animation: floatGlow 10s infinite ease-in-out;
+}
+
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+}
