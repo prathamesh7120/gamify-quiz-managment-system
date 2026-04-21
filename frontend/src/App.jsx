@@ -1,27 +1,32 @@
-import { Routes, Route } from 'react-router-dom'
-import HomePage from './pages/Home'
-import LoginPage from './pages/Login'
-import AdminPage from './pages/AdminDashboard'
-import QuizPage from './pages/QuizPage'
-import LeaderboardPage from './pages/LeaderBoard'
-import WelcomeCard from './components/WelcomeCard'
+import { Routes, Route, Navigate } from "react-router-dom";
+
+// ✅ IMPORT ALL COMPONENTS
+import Login from "./pages/Login.jsx";
+import Signup from "./pages/Signup.jsx";
+import ForgotPassword from "./pages/ForgotPassword.jsx";
+import ResetPassword from "./pages/ResetPassword.jsx";
+import SuperAdmin from "./pages/SuperAdmin.jsx";
 
 function App() {
   return (
-    <>
-
     <Routes>
-      <Route path="/" element={<HomePage />} /> 
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/admin" element={<AdminPage />} />
-      <Route path="/quiz" element={<QuizPage />} />
-      <Route path="/leaderboard" element={<LeaderboardPage />} />
+      {/* Default Route */}
+      <Route path="/" element={<Login />} />
+
+      {/* Auth Routes */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+
+      {/* Reset Password */}
+      <Route path="/reset-password/:token?" element={<ResetPassword />} />
+
+      {/* Super Admin */}
+      <Route path="/superadmin" element={<SuperAdmin />} />
+
+      
     </Routes>
-
-
-       <WelcomeCard/>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
